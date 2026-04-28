@@ -13,7 +13,7 @@ Ziel: Eine Web-App, die freie Tennisplaetze in und um Stuttgart fuer Nicht-Mitgl
 ## Aktueller Stand
 
 Die erste Recherche ist in [research/venues.md](./research/venues.md) dokumentiert.
-Ein klickbares Frontend-MVP liegt in `index.html`, `styles.css`, `app.js` und `server.js`.
+Ein klickbares Frontend-MVP liegt in `index.html`, `styles.css`, `app.js` und `local-server.js`.
 
 Wichtigstes Zwischenfazit:
 
@@ -118,6 +118,7 @@ Das Projekt ist fuer Vercel vorbereitet:
 - API-Funktionen liegen unter `api/`
 - `vercel.json` setzt die Function-Laufzeitdauer
 - `package.json` enthaelt lokale Scripts
+- `local-server.js` ist nur fuer lokale Entwicklung und wird nicht auf Vercel deployed
 
 ### GitHub
 

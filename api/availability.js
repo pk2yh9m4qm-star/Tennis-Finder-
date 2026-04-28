@@ -1,8 +1,14 @@
 const { getEbusyAvailability } = require("../lib/ebusy");
 const liveSources = require("../data/live-sources.json");
 
+function getQuery(req) {
+  if (req.query) return req.query;
+  const url = new URL(req.url || "/", "https://tennisplatz-finder.local");
+  return Object.fromEntries(url.searchParams.entries());
+}
+
 module.exports = async function handler(req, res) {
-  const { source: sourceId, date } = req.query;
+  const { source: sourceId, date } = getQuery(req);
   const source = liveSources.find((entry) => entry.id === sourceId);
 
   if (!source) {
