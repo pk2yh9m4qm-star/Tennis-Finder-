@@ -1,0 +1,6 @@
+local-server.js
+research/
+.DS_Store
+node_modules/
+.vercel/
+*.log
